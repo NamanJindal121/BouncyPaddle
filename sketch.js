@@ -9,11 +9,11 @@ function preload() {
   paddleImage = loadImage("paddle.png");
 }
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
    /* create the Ball Sprite and the Paddle Sprite */
   
-  ball = createSprite(200, 200);
-  paddle = createSprite(330, 200);
+  ball = createSprite(400, 400);
+  paddle = createSprite(730, 200);
   /* assign the images to the sprites */
   
   ball.addImage(ballImage);
@@ -36,8 +36,8 @@ function draw() {
   ball.bounceOff(edges[3]);
   
   if(ball.isTouching(edges[1])){
-     ball.x = 200;
-    ball.y = 200;
+     ball.x = 400;
+    ball.y = 400;
   }
 
   /* Allow the ball to bounceoff from the paddle */
